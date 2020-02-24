@@ -32,5 +32,11 @@ class ProductosTest {
 		Assert.assertEquals(false, ((Articulo)product1).estaDisponible(5));
 		Assert.assertEquals(true, ((Articulo)product1).estaDisponible(3));
 	}
+	
+	@Test
+	void articuloCalcularTarifa() {
+		Product product1= new Articulo("Cocoa",5,1);
+		Assert.assertEquals(15, ((Articulo)product1).calcularTarifa(3));
+	}
 
 }

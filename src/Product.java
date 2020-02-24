@@ -4,10 +4,10 @@ public abstract class Product {
 	int precio=0;
 	int saldo=0;
 	
+	abstract boolean estaDisponible(int cant);
 	
-	int calcularTarifa(int cant) {
-		return 0;
-	}
+	abstract int calcularTarifa(int cant);
+	
 	void setNombre(String nombre) {
 		this.nombre=nombre;
 	}

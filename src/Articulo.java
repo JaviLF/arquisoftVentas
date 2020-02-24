@@ -23,6 +23,6 @@ public class Articulo extends Product{
 		return(cant<=saldo);
 	}
 	public int calcularTarifa(int cant) {
-		return 0;
+		return this.precio*cant;
 	}
 }
