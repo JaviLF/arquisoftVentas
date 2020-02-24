@@ -26,6 +26,6 @@ public class Servicio extends Product{
 	}
 	@Override
 	public int calcularTarifa(int cant) {
-		return 0;
+		return this.cantHoras*this.precio*cant;
 	}
 }

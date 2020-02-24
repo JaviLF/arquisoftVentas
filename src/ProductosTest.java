@@ -60,4 +60,9 @@ class ProductosTest {
 		Assert.assertEquals(true, ((Servicio)product1).estaDisponible(5));
 		Assert.assertEquals(false, ((Servicio)product1).estaDisponible(2));
 	}
+	@Test
+	void servicioCalcularTarifa() {
+		Product product1= new Servicio("Reparacion",6,12);
+		Assert.assertEquals(216, ((Servicio)product1).calcularTarifa(3));
+	}
 }
