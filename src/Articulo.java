@@ -1,27 +1,30 @@
 
 public class Articulo extends Product{
+	int cantidad;
+	
 	Articulo(){
 		this.nombre=" ";
 		this.precio=0;
-		this.saldo=0;
+		this.cantidad=0;
 	}
-	Articulo(String nombre,int precio, int saldo){
+	Articulo(String nombre,int precio, int cant){
 		this.nombre=nombre;
 		this.precio=precio;
-		this.saldo=saldo;
+		this.cantidad=cant;
 	}
 	
+	public void setCantidad(int cant) {
+		this.cantidad=cant;
+	}
+	public int getCantidad() {
+		return this.cantidad;
+	}
 	
-	public void setSaldo(int saldo) {
-		this.saldo=saldo;
-	}
-	public int getSaldo() {
-		return this.saldo;
-	}
-
+	@Override
 	public boolean estaDisponible(int cant) {
-		return(cant<=saldo);
+		return(cant<=cantidad);
 	}
+	@Override
 	public int calcularTarifa(int cant) {
 		return this.precio*cant;
 	}

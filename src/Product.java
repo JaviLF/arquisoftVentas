@@ -1,8 +1,7 @@
 
 public abstract class Product {
-	String nombre="";
-	int precio=0;
-	int saldo=0;
+	String nombre;
+	int precio;
 	
 	abstract boolean estaDisponible(int cant);
 	
