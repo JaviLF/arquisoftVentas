@@ -13,5 +13,16 @@ class ProductosTest {
 		Assert.assertEquals(5, product1.getPrecio());
 		Assert.assertEquals(1, ((Articulo)product1).getSaldo());
 	}
+	
+	@Test
+	void articuloSetter() {
+		Product product1= new Articulo();
+		product1.setNombre("Cafe");
+		product1.setPrecio(7);
+		((Articulo)product1).setSaldo(3);
+		Assert.assertEquals("Cafe", product1.getNombre());
+		Assert.assertEquals(7, product1.getPrecio());
+		Assert.assertEquals(3, ((Articulo)product1).getSaldo());
+	}
 
 }
