@@ -22,7 +22,7 @@ public class Servicio extends Product{
 	
 	@Override
 	public boolean estaDisponible(int cant) {
-		return false;
+		return (cant>=this.cantHoras);
 	}
 	@Override
 	public int calcularTarifa(int cant) {
