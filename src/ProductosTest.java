@@ -43,5 +43,14 @@ class ProductosTest {
 		Assert.assertEquals(6, product1.getPrecio());
 		Assert.assertEquals(12, ((Servicio)product1).getCantidad());
 	}
-
+	@Test
+	void servicioSetter() {
+		Product product1= new Servicio("Reparacion",6,12);
+		product1.setNombre("Atencion");
+		product1.setPrecio(7);
+		((Servicio)product1).setCantidad(5);
+		Assert.assertEquals("Atencion", product1.getNombre());
+		Assert.assertEquals(7, product1.getPrecio());
+		Assert.assertEquals(5, ((Servicio)product1).getCantidad());
+	}
 }
