@@ -4,9 +4,7 @@ public abstract class Product {
 	int precio=0;
 	int saldo=0;
 	
-	boolean estaDisponible(int cant) {
-		return false;
-	}
+	
 	int calcularTarifa(int cant) {
 		return 0;
 	}

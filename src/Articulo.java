@@ -20,7 +20,7 @@ public class Articulo extends Product{
 	}
 
 	public boolean estaDisponible(int cant) {
-		return false;
+		return(cant<=saldo);
 	}
 	public int calcularTarifa(int cant) {
 		return 0;
