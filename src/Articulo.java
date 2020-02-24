@@ -1,6 +1,5 @@
 
 public class Articulo extends Product{
-	int cantidad;
 	
 	Articulo(){
 		this.nombre=" ";
@@ -11,13 +10,6 @@ public class Articulo extends Product{
 		this.nombre=nombre;
 		this.precio=precio;
 		this.cantidad=cant;
-	}
-	
-	public void setCantidad(int cant) {
-		this.cantidad=cant;
-	}
-	public int getCantidad() {
-		return this.cantidad;
 	}
 	
 	@Override

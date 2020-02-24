@@ -2,6 +2,7 @@
 public abstract class Product {
 	String nombre;
 	int precio;
+	int cantidad;
 	
 	abstract boolean estaDisponible(int cant);
 	
@@ -18,5 +19,11 @@ public abstract class Product {
 	}
 	int getPrecio() {
 		return this.precio;
+	}
+	public void setCantidad(int cant) {
+		this.cantidad=cant;
+	}
+	public int getCantidad() {
+		return this.cantidad;
 	}
 }

@@ -1,31 +1,23 @@
 
 public class Servicio extends Product{
-	int cantHoras;
 	
 	Servicio(){
 		this.nombre=" ";
 		this.precio=0;
-		this.cantHoras=0;
+		this.cantidad=0;
 	}
-	Servicio(String nombre,int precio, int cantHoras){
+	Servicio(String nombre,int precio, int cantidad){
 		this.nombre=nombre;
 		this.precio=precio;
-		this.cantHoras=cantHoras;
-	}
-
-	public void setCantidad(int cant) {
-		this.cantHoras=cant;
-	}
-	public int getCantidad() {
-		return this.cantHoras;
+		this.cantidad=cantidad;
 	}
 	
 	@Override
 	public boolean estaDisponible(int cant) {
-		return (cant>=this.cantHoras);
+		return (cant<=this.cantidad);
 	}
 	@Override
 	public int calcularTarifa(int cant) {
-		return this.cantHoras*this.precio*cant;
+		return 3*this.precio*cant;
 	}
 }
